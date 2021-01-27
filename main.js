@@ -1,6 +1,6 @@
 let
     cache = {},
-    currentVerse = {};
+    currentVerse = '';
 const
     books = document.getElementById('books'),
     submit = document.getElementById('submit'),
@@ -18,9 +18,9 @@ async function getBooks() {
 function sendToDisplay(e) {
     e.preventDefault();
     const
-        book = submit.books.getAttribute('data-value'),
-        chapter = submit.chapters.value,
-        verse = submit.verse.value;
+        book = submit.books.getAttribute('data-value') || 1,
+        chapter = Math.abs(submit.chapters.value) || 1,
+        verse = Math.abs(submit.verse.value) || 1;
     findVerse(`${book}.${chapter}.${verse}`);
 }
 
@@ -45,6 +45,7 @@ function sendResult(content, book, chapter, verse) {
 }
 
 function navigate(action) {
+    if (!currentVerse) return;
     const [book, chapter, verse] = currentVerse.split('.');
     const move = action === 'next' ? +verse + 1 : +verse - 1;
     findVerse(`${book}.${chapter}.${move}`);
@@ -53,12 +54,12 @@ function navigate(action) {
 submit.addEventListener('submit', sendToDisplay);
 
 window.onload = async () => {
-    getBooks().then(res => {
-        if (res) {
-            cache = res;
-            document.body.classList.remove('loading');
-        }
-    });
+    const response = await getBooks();
+    if (response) {
+        cache = response;
+        document.body.classList.remove('loading');
+        books.focus();
+    }
 };
 
 window.addEventListener('keydown', function (e) {
