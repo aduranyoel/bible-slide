@@ -12,9 +12,7 @@ html {
 }
 
 body {
-    background: #00B4DB; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: white;
     height: 100vh;
     margin: 0;
     display: flex;
@@ -32,7 +30,7 @@ nav {
 }
 
 .scripture-styles {
-    color: white;
+    color: black;
     margin: auto;
     font-size: 6.5vh;
     padding: 4rem;
@@ -66,8 +64,8 @@ Spinner
     height: 0;
     margin: 8px;
     box-sizing: border-box;
-    border: 32px solid #fff;
-    border-color: #fff transparent #fff transparent;
+    border: 32px solid #000;
+    border-color: #000 transparent #000 transparent;
     animation: lds-hourglass 1.2s infinite;
 }
 
@@ -99,12 +97,12 @@ Autocomplete
 }
 input, button {
     border: 1px solid transparent;
-    background-color: #f1f1f1;
+    background-color: transparent;
     /*padding: 10px;*/
     /*font-size: 16px;*/
 }
 input[type=text], input[type=number] {
-    background-color: #f1f1f1;
+    background-color: transparent;
     width: 100%;
     outline: none;
 }
