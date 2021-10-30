@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Bible Slide">
+    <meta name="description" content="Holly Bible Reina Valera 1960">
+    <meta name="theme-color" content="#fff" />
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="icon.png">
     <title>Bible Slide</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="loading">
 
-<div class="lds-hourglass"></div>
+    <div class="lds-hourglass"></div>
 
-<nav>
-    <form id="submit" autocomplete="off">
-        <div class="autocomplete">
-            <input type="text" name="books" id="books" placeholder="Book">
-        </div>
-        <div class="autocomplete">
-            <input type="number" name="chapters" placeholder="Chapter">
-        </div>
-        <div class="autocomplete">
-            <input type="number" name="verse" placeholder="Verse">
-        </div>
-        <input type="submit">
-    </form>
-</nav>
+    <nav>
+        <form id="submit" autocomplete="off">
+            <div class="autocomplete">
+                <input type="text" name="books" id="books" placeholder="Book">
+            </div>
+            <div class="autocomplete">
+                <input type="number" name="chapters" placeholder="Chapter">
+            </div>
+            <div class="autocomplete">
+                <input type="number" name="verse" placeholder="Verse">
+            </div>
+            <input type="submit">
+        </form>
+    </nav>
 
-<div id="result" class="scripture-styles"></div>
+    <main id="result" class="scripture-styles"></main>
 
-<script src="autocomplete.js"></script>
-<script src="main.js"></script>
+    <script src="autocomplete.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
