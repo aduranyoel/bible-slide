@@ -7,7 +7,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: prompt-bold, serif;
+    font-family: prompt-bold, sans-serif;
     font-size: 16px;
 }
 
@@ -94,6 +94,8 @@ Autocomplete
     /*the container must be positioned relative:*/
     position: relative;
     display: inline-block;
+    font-family: sans-serif;
+    font-size: 0.95rem;
 }
 input, button {
     border: 1px solid transparent;
