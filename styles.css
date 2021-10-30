@@ -1,13 +1,13 @@
 @font-face {
-    font-family: myFirstFont;
-    src: url(YuseiMagic-Regular.ttf);
+    font-family: prompt-bold;
+    src: url(Prompt-Bold.ttf);
 }
 
 html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: myFirstFont, serif;
+    font-family: prompt-bold, serif;
     font-size: 16px;
 }
 
